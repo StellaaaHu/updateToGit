@@ -41,10 +41,11 @@ def integrate(key, arr):
         else:
             key += 2
         return integrate(key, arr)
+    return arr
 
 key = 1
-integrate(key,arr)
-print(arr)
+r = integrate(key,arr)
+print(r)
 
 
 
