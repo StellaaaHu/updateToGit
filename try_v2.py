@@ -1,6 +1,11 @@
 # -*-coding:utf-8-*-
 arr = [
     {
+        "channel_name" : "log",
+        "context"   : "我只是一个记录日志",
+        "session_key" : "2290f8da70aefcbde37f98321bb90a11",
+    },
+    {
         "channel_name" : "mysql",
         "context"      : "select * from table1 ",
         "session_key"  :"2290f8da70aefcbde37f98321bb90a11",
@@ -43,7 +48,10 @@ def integrate(key, arr):
         return integrate(key, arr)
     return arr
 
-key = 1
+if arr[0]['channel_name'] == 'mysql':
+    key = 1
+else:
+    key = 2
 r = integrate(key,arr)
 print(r)
 
